@@ -1,0 +1,54 @@
+
+@font-face {
+    font-family: Pacifito;
+    src: url(../font/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoReg;
+    src: url(../font/roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url(../font/roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: RobotoThin;
+    src: url(../font/roboto/Roboto-Thin.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: RobotoReg;
+}
+
+:root{
+    --colorTheme : #35a2fa;
+    --colorthemeDur : #1e9afe ;
+    --jaune : #FFDF00;
+    --white : #edf1f4;
+    --whiteBe : rgb(250, 250, 250);
+    --red : #f17171;
+    --redBe : #eb4c4c ;
+
+    --redkely : #f8c4c4;
+
+    --vertBe: hsla(153deg, 53%, 53%,1);
+    --vertHover: rgb(89, 217, 159);
+    --vert: rgb(114, 221, 173);
+    --vertkely: rgb(191, 245, 221);
+    --noirBe : hsl(221, 14%, 21%);
+    --noirkely :rgba(46, 51, 61, 0.711);
+    --noir :rgba(46, 51, 61, 0.801);
+
+
+    /* tena izy  */
+    --violetBe : #542768;
+    --violet : #8c4281;
+    --violetClaire : #c46ac9a3;
+
+}

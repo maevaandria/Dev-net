@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.css">
+    <!-- ders -->
+    <link rel="stylesheet" href="../css/quest.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.5.2-web/css/all.min.css">
+    <!-- Bulma -->
+    <link rel="stylesheet" href="../assets/bulma/css/bulma.min.css">
+    <title>Dev'Net</title>
+</head>
+<body >
+    <main id="mainContainer">
+        <nav>
+            <button class="exitQuestion"><i class="fa-solid fa-xmark"></i></button>
+            <!-- ProgressBar -->
+            <progress  class="progress is-success nb-Progress" value="0" max="100">
+            </progress>
+            <button class="life"><i class="fa-solid fa-trophy"></i></button>
+            <p id="cptPointPerEtape" style="color: var(--violet);">5</p>
+        </nav>
+
+        <p class="titleChallenge">Choisissez la bonne réponse</p>
+
+        <!-- Question block -->
+        <div class="questBlock">
+            <p class="questionAff"></p>
+        </div>
+
+        <!-- reponse block -->
+        <div class="repBlock">
+            <button class="btnRep"></button>
+            <button class="btnRep"></button>
+            <button class="btnRep"></button>
+        </div>
+        <!-- valid btn section -->
+         <div class="validBtnSection">
+            <div style="width: 80%;">
+                <p class="compliment">Bonne réponse !</p>
+                <p class="reponse-exact"></p>
+            </div>
+            <button class="btnValide">
+                Valider
+            </button>
+         </div>
+    </main>
+    <main id="resultMainContainer">
+        <div class="illustrationWinnerSection">
+            <a href="./categ.html" class="versMenu"> <i class="fa-solid fa-xmark"></i> </a>
+            <img src="../img/team-happy-employees-winning-award-celebrating-success-business-people-enjoying-victory-getting-gold-cup-trophy-vector-illustration-reward-prize-champions-s.png" alt="" class="animationWinner">
+            <h2>Félicitations</h2>
+        </div>
+        <div class="affResultPoint">
+            <div class="cercleOne" >
+                <div class="cercleTwo">
+                    <div class="cercleThree">
+                        <p class="poinObt">50 pts</p>
+                        <p>votre score</p>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <!--  -->
+        </div>
+    </main>
+    <script src="../js/cursorAnim.js"></script>
+    <script src="../js/quest.js"></script>
+    <script src="../assets/fontawesome-free-6.5.2-web/js/all.min.js"></script>
+</body>
+</html>

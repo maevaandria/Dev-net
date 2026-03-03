@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevNet</title>
+    <!-- All style -->
+     <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/categ.css">
+    <link rel="stylesheet" href="../css/cursorAnime.css">
+
+    <!-- fontAwesome -->
+     <link rel="stylesheet" href="../assets/fontawesome-free-6.5.2-web/css/all.min.css">
+    
+    <!-- aos -->
+     <link rel="stylesheet" href="../assets/aos-master/dist/aos.css">
+    
+</head>
+<body>
+    <!-- curseur -->
+    <div> 
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+
+        
+    </div>
+    <div class="container">
+        <div class="left" >
+            <div class="text-section">
+                <h1 class="animPret">Prêt à jouer ?</h1>
+                <h2 data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-sine" class="choisirCatt">Choisir la catégorie :</h2>
+            </div>
+            <div class="links-section">
+                <a data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine" id="categ0"  class="link link-1">Les bases du JavaScript
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a data-aos="fade-right" data-aos-duration="1300" data-aos-easing="ease-in-sine" id="categ1"  class="link link-2">Comédie absurde
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-sine" id="categ2"  class="link link-3">Culture générale
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a data-aos="fade-right" data-aos-duration="1700" data-aos-easing="ease-in-sine" id="categ3"  class="link link-4">Madagascar
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="right" data-aos="fade-left" data-aos-duration="1300" data-aos-easing="ease-in-sine">
+            <img src="../img/landing illustr.png" alt="Description de l'image" class="photo">
+            <img src="../img/gens-plats-posant-questions-illustration.png" class="illustrLanding" alt="">
+        </div>
+    </div>
+
+    <script src="../js/cursorAnim.js"></script>
+    <script src="../assets/fontawesome-free-6.5.2-web/js/all.min.js"></script>
+    <script src="../assets/aos-master/dist/aos.js"></script>
+    <script src="../js/aosInit.js"></script>
+    <script>
+        
+        sessionStorage.clear();
+        let btnLink = document.querySelectorAll(".link").forEach( btn => {
+            btn.addEventListener("click",  (e) => {
+                sessionStorage.setItem("categ", parseInt(btn.id[5]));
+            })
+        })
+        document.querySelectorAll(".link").forEach( ancre => {
+            ancre.addEventListener("click", (e) => {
+                ancre.href = "quest.html";
+            })
+        })
+    </script>
+</body>
+</html>

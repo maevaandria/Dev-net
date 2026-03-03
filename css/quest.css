@@ -1,0 +1,374 @@
+
+body{
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+#mainContainer, #resultMainContainer{
+    padding: 18px;
+    border-radius: 10px;
+    width: 620px;
+    height: 780px;
+    background-color: var(--whiteBe);
+    box-shadow: 1px 1px 35px rgba(128, 128, 128, 0.107);
+}
+#mainContainer {
+    display: block;
+}
+
+.mainContainer-is-desactive{
+    display: none !important;
+}
+
+#resultMainContainer{
+ display: none;
+}
+.resultMainContainer-is-active{
+ display: block !important;
+}
+
+.animationWinner{
+    animation: animateIllustre 1.5s ease-in-out infinite;
+}
+
+
+.illustrationWinnerSection{
+    background-color: var(--violetBe);
+    /* border: 1px solid black; */
+    border-radius: 50px 50px 0 0;
+    padding-bottom: 30px;
+}
+.versMenu{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 35px;
+    font-size: 30px;
+    color: var(--white);
+    z-index: 10;
+}
+
+.versMenu:hover{
+    color: var(--redBe);
+}
+
+.illustrationWinnerSection h2{
+    text-align: center;
+    color: var(--white);
+    font-family: Pacifito;
+    font-size: 45px;
+    margin-top: -30px;
+}
+.affResultPoint{
+    background-color: var(--whiteBe);
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    margin-top: -20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cercleOne{
+    width: 200px;
+    height: 200px;
+    background-color: var(--violetBe);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cercleTwo{
+    width: 140px;
+    height: 140px;
+    background-color: var(--violetClaire);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cercleThree{
+    width: 105px;
+    height: 105px;
+    background-color: var(--violetBe);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.affResultPoint p{
+    font-size: 13px;
+    color: var(--white);
+    text-align: center;
+}
+.affResultPoint .poinObt{
+    font-size: 23px;
+    font-family: RobotoBold;
+}
+
+
+#mainContainer nav{
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: center;
+}
+#mainContainer nav progress{
+    margin:0 20px;
+}
+#mainContainer nav p{
+    margin-right:18px;
+    font-size: 16px;
+    cursor: default;
+    color: var(--redBe);
+    font-weight: 600;
+}
+.exitQuestion{
+    margin-left: 12px;
+}
+.exitQuestion, .life{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    z-index: 3;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.56);
+    background: transparent;
+    border: none;
+}
+.exitQuestion:hover{
+    color: var(--redBe);
+}
+.life{
+    cursor: default;
+    font-size: 22px;
+    margin-right: 10px;
+    color: var(--violet);
+}
+
+
+.titleChallenge{
+    margin-top: 45px;
+    margin-left: 16px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--violetBe);
+    /* font-family: RobotoThin; */
+}
+
+.questBlock{
+    margin: 22px 16px;
+    font-size: 20px;
+    color: var(--noir);
+    height: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.repBlock{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+.btnRep{
+    color: var(--noir);
+    font-weight: bold;
+    width: 80%;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 0px 2.4px rgba(128, 128, 128, 0.241);
+}
+.btnRep:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.063);
+}
+.btnRep-is-focus{
+    box-shadow: 1px 1px 0px 2.4px var(--colorTheme);
+    color: var(--colorTheme);
+    transition: .5s;
+}
+
+.validBtnSection{
+    height: 140px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;   
+    border-radius: 20px 20px 8px 8px;
+}
+.validBtnSection-is-success{
+    background-color: var(--vertkely);
+}
+.validBtnSection-is-lose{
+    background-color: var(--redkely);
+}
+
+.btnValide{
+    width: 80%;
+    height: 55px;
+    border-radius: 13px;
+    background-color: rgb(232, 230, 230);
+    color: rgb(156, 152, 152);
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    cursor: default;
+    display: block;
+}
+.btnValide-is-lose{
+    background-color: var(--red) !important;
+    box-shadow: 1px 1px 0px 2.4px var(--redBe) !important;
+}
+.btnValide-is-success{
+    background-color: var(--vert);
+    color: var(--white);
+    box-shadow: 1px 1px 0px 2.4px var(--vertBe);
+    cursor: pointer;
+}
+.btnValide-is-lost{
+    cursor: pointer;
+}
+.btnValide-is-success:hover{
+    background-color: var(--vertHover);
+}
+.btnValide-is-success:active{
+    box-shadow: none;
+    bottom: 8px;
+}
+
+.compliment{
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--redBe);
+    display: none;
+    font-weight: bold;
+}
+.compliment-is-succes{
+    color: var(--vertBe);
+}
+.compliment-active{
+    display: block;
+}
+.reponse-exact{
+    display: none;
+    color: var(--redBe);
+    font-weight: bold;
+}
+.reponse-exact-is-active{
+    display: block;
+}
+
+
+
+.nb-Progress{
+    background: red !important;
+}
+
+
+
+
+
+
+
+
+
+/* ------ R E S P O N S I V I T E --------*/
+
+
+@media screen and (max-width: 620px) {
+    #mainContainer{
+        width: 100%;
+    }
+}
+
+@media screen and (max-height: 780px) {
+    body{
+        height: 100%;
+    }
+    #mainContainer{
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .titleChallenge{
+        margin-top: 15px;
+    }
+    .questBlock{
+        margin: 10px 16px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+
+    .repBlock{
+        width: 100%;
+        height: 220px;
+    }
+    .btnRep{
+        width: 70%;
+        height: 50px;
+        border-radius: 15px;
+    }
+    .validBtnSection .btnValide{
+        width: 70%;
+        height: 50px;
+    }
+}
+@media screen and (max-height: 600px) {
+
+    .repBlock{
+        width: 100%;
+        height: 170px;
+    }
+    .btnRep{
+        width: 60%;
+        height: 40px;
+        border-radius: 15px;
+    }
+    .validBtnSection .btnValide{
+        width: 60%;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .repBlock{
+        width: 100%;
+        height: 220px;
+    }
+    .btnRep{
+        width: 70%;
+        height: 50px;
+        border-radius: 15px;
+    }
+    .validBtnSection .btnValide{
+        width: 70%;
+        height: 50px;
+    }
+}
+
+@keyframes animateIllustre {
+    0% {
+        opacity: 1;
+      }
+      50%{
+        opacity: 0.6;
+      }
+      100%{
+        opacity: 1;
+      }
+  }
